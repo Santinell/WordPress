@@ -18,6 +18,7 @@ $vars = [
 ];
 foreach ($vars as $var => $default) {
   $env = getenv($var);
+  echo $env;
   define($var, $env === false ? $default : $env);
 }
 
