@@ -14,11 +14,10 @@ $vars = [
   'SECURE_AUTH_SALT' => 'put your unique phrase here',
   'LOGGED_IN_SALT' => 'put your unique phrase here',
   'NONCE_SALT' => 'put your unique phrase here',
-  'WP_DEBUG' => false
+  'WP_DEBUG' => true
 ];
 foreach ($vars as $var => $default) {
   $env = getenv($var);
-  echo $env;
   define($var, $env === false ? $default : $env);
 }
 
